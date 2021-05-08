@@ -24,7 +24,7 @@ public class CodeGenerator {
 
         gc.setAuthor("llzzcc");
         gc.setOpen(false); //生成后是否打开资源管理器
-        gc.setFileOverride(false); //重新生成时文件是否覆盖
+        gc.setFileOverride(true); //重新生成时文件是否覆盖
 
         //UserServie
         gc.setServiceName("%sService");	//去掉Service接口的首字母I
@@ -62,7 +62,7 @@ public class CodeGenerator {
         // 5、策略配置
         StrategyConfig strategy = new StrategyConfig();
 
-        strategy.setInclude("config_grand_user");
+        strategy.setInclude("config_login_user");
 
         strategy.setNaming(NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略
         strategy.setTablePrefix(pc.getModuleName() + "_"); //生成实体时去掉表前缀
